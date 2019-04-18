@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-        <link rel="stylesheet" href="assets/css/main.css" /> 
+        <link rel="stylesheet" href="assets/css/main.css" />
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
         <script src = "main.js"></script>
@@ -23,7 +23,7 @@
 
 
                 user_input = document.input.result.value; // getElementById('result').value;
-              
+
                 if (user_input == calc_value) {
                     msg_text = "Молодец!!!, Попробуем еще раз?";
                 } else {
@@ -38,11 +38,11 @@
         </script>
 
         <style TYPE="text/css">
-            .my { display: inline-block; margin: 0 10px 10px 0; /* Отступы */ vertical-align: middle } 
+            .my { display: inline-block; margin: 0 10px 10px 0; /* Отступы */ vertical-align: middle }
             .my input { font-size: 40px; font-family: serif; font-style: normal; max-width: 150px; margin: 2px;
                         font-stretch : ultra-expanded }
             .my h1 { font-size: 40px; text-align: center; font-family: monospace }
-        </style>    
+        </style>
 
 
     </head>
@@ -57,6 +57,7 @@
                             <li><a href="division.html">Деление</a></li>
                             <li><a href="addition.html">Сложение</a></li>
                             <li><a href="substraction.html">Вычитание</a></li>
+                            <li><a href="words.html">Словарные слова</a><li>
                         </ul>
                     </nav>
                 </header>
@@ -70,12 +71,12 @@
                                 <section><!-- Sidebar -->
                                     <h3>
                                         <script>
-                                           document.write(getHeadText(type_operation));   
-                                        </script>    
+                                           document.write(getHeadText(type_operation));
+                                        </script>
                                     </h3>
                                     <p>
                                         <script>
-                                          document.write(getTextOperation(type_operation));    
+                                          document.write(getTextOperation(type_operation));
                                         </script>
                                     </p>
                                 </section>
@@ -86,8 +87,8 @@
                                 <article><!-- Content -->
                                     <h2>Вычислите значение выражения</h2>
 
-                                    <form name="input"> 
-                                        <div class="my">   
+                                    <form name="input">
+                                        <div class="my">
                                             <h1><output name="expression"></output></h1>
                                         </div>
                                         <div class="my">
@@ -96,12 +97,12 @@
                                         <div class="my">
                                             <a href="#" class="button icon fa-info-circle" onclick="check()">Проверить</a>
                                         </div>
-                                    </form> 
+                                    </form>
 
                                     <script>
                                         document.input.expression.value = format_string(result[0], result[1], type_operation);
                                         //document.input.result.width = '10px';
-                                    </script>    
+                                    </script>
 
                                 </article>
                             </div>

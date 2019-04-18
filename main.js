@@ -2,7 +2,7 @@ var OPERATION_MULTIPLICATE = 'M'; //1;
 var OPERATION_DIVISION = 'D'; //2;
 var OPERATION_ADDITION = 'A'; //3;
 var OPERATION_SUBTRACTION = 'S'; //= 4;
-var OPERATION_WORDS = 'W';
+//var OPERATION_WORDS = 'W';
 
 // генерим два случайных числа
 function getDititals(operation) {
@@ -120,6 +120,9 @@ function getHeadText(operation){
         case OPERATION_SUBTRACTION :
             textValue = "Вычитание";
             break;
+        //case OPERATION_WORDS :
+        //    textValue = 'Словарные слова;
+        //    break;
     }
 
     return textValue;
@@ -145,8 +148,8 @@ function getTextOperation(operation){
             //textValue = "Данный раздел предназначен для оценки навыков школьников, применяемых при операции вычитания";
             textValue = "Испытай себя, проверив сможешь ли ты справиться с вычитанием?";
             break;
-        case OPERATION_WORDS :
-            textValue = 'Проверь себя на знание словарных слов';
+      //  case OPERATION_WORDS :
+      //      textValue = 'Проверь себя на знание словарных слов';
 
     }
 
