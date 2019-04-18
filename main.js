@@ -2,7 +2,7 @@ var OPERATION_MULTIPLICATE = 'M'; //1;
 var OPERATION_DIVISION = 'D'; //2;
 var OPERATION_ADDITION = 'A'; //3;
 var OPERATION_SUBTRACTION = 'S'; //= 4;
-//var OPERATION_WORDS = 'W';
+var OPERATION_WORDS = 'W';
 
 // генерим два случайных числа
 function getDititals(operation) {
@@ -61,6 +61,10 @@ function getDititals(operation) {
             }
             return [digitalOne, digitalTwo];
             break;
+
+        case OPERATION_WORDS :
+            return [digitalOne, digitalTwo];
+            break;
     }
 }
 
@@ -80,6 +84,9 @@ function format_string(digitalOne, digitalTwo, operation) {
             break;
         case OPERATION_SUBTRACTION :
             symbol = '-';
+            break;
+        case OPERATION_WORDS :
+            symbol = ' ';
             break;
     }
 
@@ -101,6 +108,9 @@ function calculate(digitalOne, digitalTwo, operation) {
         case OPERATION_SUBTRACTION :
             return digitalOne - digitalTwo;
             break;
+        case OPERATION_WORDS :
+            return 0;
+            break;
     }
 }
 
@@ -120,9 +130,9 @@ function getHeadText(operation){
         case OPERATION_SUBTRACTION :
             textValue = "Вычитание";
             break;
-        //case OPERATION_WORDS :
-        //    textValue = 'Словарные слова;
-        //    break;
+        case OPERATION_WORDS :
+            textValue = 'Словарные слова';
+            break;
     }
 
     return textValue;
@@ -148,8 +158,9 @@ function getTextOperation(operation){
             //textValue = "Данный раздел предназначен для оценки навыков школьников, применяемых при операции вычитания";
             textValue = "Испытай себя, проверив сможешь ли ты справиться с вычитанием?";
             break;
-      //  case OPERATION_WORDS :
-      //      textValue = 'Проверь себя на знание словарных слов';
+        case OPERATION_WORDS :
+            textValue = 'Проверь себя на знание словарных слов';
+            break;
 
     }
 
